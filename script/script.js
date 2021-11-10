@@ -61,7 +61,7 @@ let createDeletePage = function()
     for (let i = 1; i <= steps; i++)
     {
         let newImage = document.createElement('img');
-        newImage.setAttribute('src', `./resources/deleteItem/step${i}.jpg`);
+        newImage.setAttribute('src', `./resources/deleteItem/step${i}.JPG`);
 
         images.push(newImage);
 
