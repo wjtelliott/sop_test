@@ -1,11 +1,31 @@
+/*
+
+    Created by William JT Elliott
+    Date: 11-22-2021 @ 20:33
+    Do not modify
+
+*/
+
+
 .page p
 {
     font-size: 20px;
 }
 
-.homeContentList a
+.homeContent a
 {
     font-size: 24px;
+    transition: font-size 1s;
+}
+
+.homeContent li
+{
+    font-size: 24px;
+}
+
+.homeContent a:hover
+{
+    font-size: 26px;
 }
 
 .autoScroller

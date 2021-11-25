@@ -2,8 +2,9 @@
 
     Created by William JT Elliott
     Date: 11-22-2021 @ 19:01
+    Modify this file for new page content
 
-    Last page updated: 112221@2031
+    Last page updated: 112521@1116
 */ 
 
 
@@ -20,7 +21,8 @@ let allPages = [];
 
 //     imagesPath: './resources//',
 //     className: '',
-//     headerText: ''
+//     headerText: '',
+//     group: ''
 // };
 
 let deletePage = 
@@ -34,7 +36,7 @@ let deletePage =
 
         `Log into Escalate and go into function ISTM. Press F8 to go down a block. Press SHIFT+F2 to highlight the IST Number field. Type in your IST / Order from BXK into this field and press F2 to execute.
         After it loads, press F8 to go down a block. Use the arrow keys to navigate to the correct LINE NUMBER and SKU of your piece to delete.
-        NOTE THE DELIVERY DOC# ON THE RIGHT, THAT IS YOUR SO# FOR THE SKU. Replace the number in the Quantity field to a 0 and press F9 to commit.`,
+        <b>NOTE THE DELIVERY DOC# ON THE RIGHT, THAT IS YOUR SO# FOR THE SKU.</b> Replace the number in the Quantity field to a 0 and press F9 to commit.`,
 
         `Go back into BXK and now click on the underlined line number of the SKU to delete. Click delete and confirm.`,
 
@@ -52,7 +54,8 @@ let deletePage =
     ],
     imagesPath: './resources/deleteItem/',
     className: 'deleteItemContent',
-    headerText: 'Delete Item',
+    headerText: 'Delete Item from a Truck',
+    group: 'Misc'
 };
 //push to array
 allPages.push(deletePage);
@@ -65,7 +68,7 @@ let pkrPage =
     descriptions: [
 
         `
-        Before you go into the PKR, make sure that no labels need to be received in BXK for W30W2-TODAY. You can do this by
+        <b>Before you go into the PKR, make sure that no labels need to be received in BXK for W30W2-TODAY.</b> You can do this by
         going into Receiving -> Reprint labels in BXK. Under Filters, choose unreceived tag type, and for an option add PO PO Manifest.
         In the text box add 'w30w2-*TODAYS DATE*' Example: W30W2-112221 for Nov 22, 2021. If any labels are there, they need to be received.
         After you've reprinted and/or received those labels, type PKR into the main menu of Escalate. You will see this screen, but it
@@ -81,7 +84,8 @@ let pkrPage =
 
     imagesPath: './resources/pkr/',
     className: 'pkrContent',
-    headerText: 'PKR Report'
+    headerText: 'PKR Report',
+    group: 'Escalate-Reports'
 };
 allPages.push(pkrPage);
 
@@ -108,7 +112,8 @@ let dtcsrPage =
 
     imagesPath: './resources/dtcsr/',
     className: 'dtcsrContent',
-    headerText: 'DTCSR Report'
+    headerText: 'DTCSR Report',
+    group: 'Escalate-Reports'
 };
 allPages.push(dtcsrPage);
 
@@ -119,14 +124,132 @@ let tsW1Page =
 
     imagesPath: './resources/tdmw1/',
     className: 'tsW1Content',
-    headerText: 'Finalize TS and W1 Info'
+    headerText: 'Finalize TS and W1 Info',
+    group: 'Misc'
 };
 allPages.push(tsW1Page);
 
 
 
+let shortItemPage = 
+{
 
+    descriptions: ['This page is a placeholder, and not yet finished.'],
 
+    imagesPath: './resources/null/',
+    className: 'shortItemContent',
+    headerText: 'Short Item *',
+    group: 'Misc'
+};
+allPages.push(shortItemPage);
+
+let finalizeAnISTPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'finalizeISTContent',
+    headerText: 'Finalize an IST *',
+    group: 'Escalate'
+};
+allPages.push(finalizeAnISTPage);
+
+let bolGenerationPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'bolGenerationContent',
+    headerText: 'BOL Generation *',
+    group: 'BXK'
+};
+allPages.push(bolGenerationPage);
+
+let assignWorkPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'assignWorkToUserContent',
+    headerText: 'Assign Work to a User *',
+    group: 'BXK'
+};
+allPages.push(assignWorkPage);
+
+let createIstPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'createISTContent',
+    headerText: 'Create an IST *',
+    group: 'LOFT'
+};
+allPages.push(createIstPage);
+
+let addonPolicyPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'addonPolicyContent',
+    headerText: 'Addons / Addon Policy *',
+    group: 'LOFT'
+};
+allPages.push(addonPolicyPage);
+
+let tdmBasicsPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'tdmBasicContent',
+    headerText: 'Using TDM to finalize trucks *',
+    group: 'Escalate'
+};
+allPages.push(tdmBasicsPage);
+
+let trackingLostPcsPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'trackingLostPcsContent',
+    headerText: 'Tracking Down Lost Pieces *',
+    group: 'Misc'
+};
+allPages.push(trackingLostPcsPage);
+
+let discrepancySheetPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'discrepancySheetContent',
+    headerText: 'Discrepancy Sheet Info *',
+    group: 'Misc'
+};
+allPages.push(discrepancySheetPage);
+
+let printTagsFromBOLPage = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'printBolTagsContent',
+    headerText: 'Print Tags from a BOL *',
+    group: 'BXK'
+};
+allPages.push(printTagsFromBOLPage);
 
 
 
@@ -136,12 +259,14 @@ allPages.push(tsW1Page);
 let infoPage =
 {
     //no img, just 1 desc
-    descriptions: [`TODO List: Short out pieces, finalize a truck load, delete a tag, BOL generation, assigning work groups to users, creating ISTs, Add-on policy, TDM basics, tracking down lost pieces, discrepancy sheet, printing tags from a BOL.`,
-    `To add/update items on this list, forward below:`
+    descriptions: [`Pages with a * on the title are not finished.
+    This listed menu will eventually be a drop-down menu style, with this page as the 'home content page'.
+    To add/update pages on this list, contact a supervisor`
     ],
 
-    imagesPath: './resources/info/',
+    imagesPath: './resources/null/',
     className: 'infoPage',
-    headerText: 'Coming soon to this list / Additional Info'
+    headerText: 'Coming soon to this list / Additional Info',
+    group: 'Additional-Info'
 };
 allPages.push(infoPage);

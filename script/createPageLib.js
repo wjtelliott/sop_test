@@ -42,7 +42,7 @@ let createPage = function(className, headerText, imagePaths, descriptions)
     for (let i = 0; i < descriptions.length; i++)
     {
         let newPara = document.createElement('p');
-        newPara.textContent = descriptions[i];
+        newPara.innerHTML = descriptions[i];
         newDiv.append(newPara);
 
         newDiv.append(document.createElement('br'));
@@ -88,6 +88,20 @@ let wrapLink = function(link)
 }
 
 
+//<li>innerHtmlText<ul class=groupClassName></ul></li>
+let createListItemGroup = function(innerHtmlText, groupClassName)
+{
+    let groupListTitle = document.createElement('li');
+    groupListTitle.append(innerHtmlText.replaceAll('-', ' '));
+
+    let groupInnerList = document.createElement('ul');
+    groupInnerList.setAttribute('class', groupClassName);
+
+    groupListTitle.append(groupInnerList);
+    return groupListTitle;
+};
+
+
 
 // back to top btn functions
 // Do functions work better in JS with or without OOP style? oh well.. these will be static funcs
@@ -106,3 +120,4 @@ function autoScrollToTop()
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
