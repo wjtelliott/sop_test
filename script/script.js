@@ -39,6 +39,7 @@ let createGroups = function()
     {
         if (!groups.groupNames.includes(allPages[i].group))
         {
+
             groups.groupNames.push(allPages[i].group);
             groups.groupHtml.push(createListItemGroup(allPages[i].group, allPages[i].group));
         }
@@ -47,7 +48,7 @@ let createGroups = function()
     groups.groupHtml.forEach(
         function(e)
         {
-            document.querySelector(`.${homePageReturnLink}`).append(e);
+            document.querySelector(`.${homePageReturnLink}List`).append(e);
         },null
     );
 };
@@ -57,7 +58,7 @@ let appendToGroups = function()
 
     for (let i = 0; i < allPages.length; i++)
     {
-        document.querySelector(`.${allPages[i].group}`).append(
+        document.querySelector(`.${allPages[i].group}-content`).append(
             createListLink(
                 null, 
                 allPages[i].className, 
@@ -91,3 +92,6 @@ for (let i = 0; i < allPages.length; i++)
 
 createGroups();
 appendToGroups();
+
+// Append info to home page AFTER drop down boxes.
+document.querySelector('.homeContent').append(info());

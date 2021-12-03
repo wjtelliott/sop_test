@@ -77,7 +77,8 @@ let createListLink = function(styleText, refText, onClickText, innerHtmlText)
     newListLink.setAttribute('onclick', onClickText);
 
     // This needs to return as a DOM list object wrapping our content here
-    return wrapLink(newListLink);
+    //return wrapLink(newListLink);
+    return newListLink;
 };
 
 let wrapLink = function(link)
@@ -87,18 +88,56 @@ let wrapLink = function(link)
     return wrap;
 }
 
+function info()
+{
+    let obj = document.createElement('div');
+    obj.setAttribute('class', 'newInfoPage');
+    let obj_p = document.createElement('p');
+    obj.append(document.createElement('hr'));
+
+    infoPage.descriptions.forEach(
+
+        function(e)
+        {
+            obj_p.innerHTML += '<br>' + e;
+        }, null
+    );
+
+    obj.append(obj_p);
+    return obj;
+};
 
 //<li>innerHtmlText<ul class=groupClassName></ul></li>
 let createListItemGroup = function(innerHtmlText, groupClassName)
 {
-    let groupListTitle = document.createElement('li');
-    groupListTitle.append(innerHtmlText.replaceAll('-', ' '));
+    let groupListTitle = document.createElement('div');
+    groupListTitle.setAttribute('class', `dropdown ${groupClassName}`);
+    groupListTitle.append(button(innerHtmlText.replaceAll('-', ' ')));
 
-    let groupInnerList = document.createElement('ul');
-    groupInnerList.setAttribute('class', groupClassName);
+    let groupInnerList = document.createElement('div');
+    groupInnerList.setAttribute('class', groupClassName + '-content dropdown-content');
 
     groupListTitle.append(groupInnerList);
     return groupListTitle;
+};
+
+function button(text)
+{
+    let obj = document.createElement('button');
+    obj.innerHTML = text;
+    obj.setAttribute('class', 'dropbtn');
+    obj.append(caretFunc());
+
+    return obj;
+};
+
+function caretFunc()
+{
+
+    let obj = document.createElement('i');
+    obj.setAttribute('class', 'fa fa-caret-down');
+    return obj;
+
 };
 
 

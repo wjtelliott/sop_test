@@ -259,9 +259,8 @@ allPages.push(printTagsFromBOLPage);
 let infoPage =
 {
     //no img, just 1 desc
-    descriptions: [`Pages with a * on the title are not finished.
-    This listed menu will eventually be a drop-down menu style, with this page as the 'home content page'.
-    To add/update pages on this list, contact a supervisor`
+    descriptions: [`Welcome to the Standard Operating Procedures module.<br><br> Here will you find additional infomation on how to complete certain jobs / tasks related to each above topic.
+    If a topic or module is confusing, needs rework or additions, or to add a new topic to this page: contact a supervisor.`
     ],
 
     imagesPath: './resources/null/',
@@ -269,4 +268,18 @@ let infoPage =
     headerText: 'Coming soon to this list / Additional Info',
     group: 'Additional-Info'
 };
-allPages.push(infoPage);
+//allPages.push(infoPage);
+
+
+let progHelpPage =
+{
+    //no img, just 1 desc
+    descriptions: [`This page is not yet complete. More info will be here on how to manage / fix / add / replace information to this SOP module.`
+    ],
+
+    imagesPath: './resources/null/',
+    className: 'progHelpPage',
+    headerText: 'Readme',
+    group: 'Additional-Info'
+};
+allPages.push(progHelpPage);
