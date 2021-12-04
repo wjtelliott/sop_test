@@ -12,10 +12,11 @@ const homePageReturnLink = 'homeContent';
 
 let createReturnLink = function()
 {
-    let returnLink = document.createElement('a');
-    returnLink.textContent = 'Return to SOP';
+    let returnLink = document.createElement('button');
+    returnLink.textContent = 'Click to return to SOP Main Menu';
     returnLink.setAttribute('href',`#${homePageReturnLink}`);
     returnLink.setAttribute('onclick', `return changePage('${homePageReturnLink}')`);
+    returnLink.setAttribute('class', `dropbtn`);
     returnLink.style.fontSize = '24px';
     return returnLink;
 };

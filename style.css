@@ -28,7 +28,6 @@
     font-size: 28px;
     border: none;
     outline: none;
-    color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -42,10 +41,10 @@
     overflow: visible;
     text-align: center;
     height: 5px;
+    z-index: -99;
 }
 hr:after {
     background: #fff;
-    content: 'Z';
     padding: 0 4px;
     position: relative;
     top: -13px;
@@ -69,7 +68,7 @@ hr:after {
 }
 .homeContentList button
 {
-    transition: font-size 1s;
+    transition: background-color 1s, font-size 1s;
 }
 .homeContentList button:hover, .dropdown:hover .dropbtn 
 {

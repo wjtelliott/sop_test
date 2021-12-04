@@ -134,11 +134,23 @@ allPages.push(tsW1Page);
 let shortItemPage = 
 {
 
-    descriptions: ['This page is a placeholder, and not yet finished.'],
+    descriptions: [
+        
+        `First make sure the item you intent to short has at least one marked as Available in LOFT.
+        If there is not any available in LOFT as available, you will need to un-fill one of the Reserved pieces from its attached SO in SOM on ERS.`,
 
-    imagesPath: './resources/null/',
+        `Next go into Inventory > Adjust Inventory`,
+
+        `Type in your SKU or Tag# in the Find bar and press ENTER. Find the tag of the item you're looking to short out.`,
+
+        `Check the box next to the item you wish to short out, Choose option Delete -> WMS -> with the memo of reading short. Click delete and confirm.
+        <b>If you've made an IST W2 to W2 to fill an item to make it available, remember to go back and void that IST.</b>`
+
+],
+
+    imagesPath: './resources/shortItem/',
     className: 'shortItemContent',
-    headerText: 'Short Item *',
+    headerText: 'Short Item',
     group: 'Misc'
 };
 allPages.push(shortItemPage);
@@ -146,11 +158,19 @@ allPages.push(shortItemPage);
 let finalizeAnISTPage = 
 {
 
-    descriptions: ['This page is a placeholder, and not yet finished.'],
+    descriptions: [
+        
+        `To finalize an IST, open ERS and open ISTM.`,
 
-    imagesPath: './resources/null/',
+        `Fill out the top of ISTM as shown, change the date to your finalizing date, and change the store / location to the store and location that you are finalizing the IST TO. This example finalizing an IST TO W2.`,
+
+        `Press F8, and type in your IST to finalize. Press F2 to Open the IST. Press F9 to commit, and F12 to back out.`
+    
+    ],
+
+    imagesPath: './resources/finalizeIST/',
     className: 'finalizeISTContent',
-    headerText: 'Finalize an IST *',
+    headerText: 'Finalize an IST',
     group: 'Escalate'
 };
 allPages.push(finalizeAnISTPage);
@@ -163,7 +183,7 @@ let bolGenerationPage =
     imagesPath: './resources/null/',
     className: 'bolGenerationContent',
     headerText: 'BOL Generation *',
-    group: 'BXK'
+    group: 'Office'
 };
 allPages.push(bolGenerationPage);
 
@@ -178,6 +198,18 @@ let assignWorkPage =
     group: 'BXK'
 };
 allPages.push(assignWorkPage);
+
+let allocateAnOrder = 
+{
+
+    descriptions: ['This page is a placeholder, and not yet finished.'],
+
+    imagesPath: './resources/null/',
+    className: 'allocateAnOrderContent',
+    headerText: 'Allocate an Order *',
+    group: 'BXK'
+};
+allPages.push(allocateAnOrder);
 
 let createIstPage = 
 {
@@ -235,7 +267,7 @@ let discrepancySheetPage =
     imagesPath: './resources/null/',
     className: 'discrepancySheetContent',
     headerText: 'Discrepancy Sheet Info *',
-    group: 'Misc'
+    group: 'Office'
 };
 allPages.push(discrepancySheetPage);
 
@@ -247,11 +279,41 @@ let printTagsFromBOLPage =
     imagesPath: './resources/null/',
     className: 'printBolTagsContent',
     headerText: 'Print Tags from a BOL *',
-    group: 'BXK'
+    group: 'Office'
 };
 allPages.push(printTagsFromBOLPage);
 
 
+let unfillSalesOrderPage =
+{
+
+    descriptions:
+    [
+
+        `To unfill a sales order, first write down your SO#. If it has an A,B,C, etc at the end, it is a split. Write that down, but it is not part of the SO#. After you've gotten your SO#, open ERS and go into SOM.`,
+
+        `Company Code is SLU, password SLU for corporate store. If you attempt to make changes to an SO# for a franchise store, it will tell you that 'user MIF' or etc only is allowed to make changes to this order. 
+        If that happens, use that three letter user for the company code AND password in SOM. You may have to back out and go back into SOM to do this.`,
+
+        `Log in again using your ERS login. Press F8 to highlight SO#, and type in your SO. Press F2 to execute and open that SO#.`,
+
+        `If you have to go to a split of the SO#, use the down and up arrows to navigate to the correct split, and then press F8 to go to the lines of the SO#.`,
+
+        `In this example, the store and location of the SKU 7050052 in Ln12 of this SO# is W2-W2WHS, which is filled from W2.`,
+
+        `To unfill this SO#, Press F8 to go to the SO lines, and use the arrow keys to navigate to the correct line / sku. Press ENTER until your cursor is on the Store (W2) that you wish to unfill.
+         Press backspace so that it is now blank, and press ENTER to make the location also blank. Press F9 to commit and save.
+          <b>Make sure to do any changes to that inventory in a timely manner after unfilling this SO. It will re-fill that SO after a short period, or if any other changes are made.</b>`
+
+    ],
+
+    imagesPath: './resources/unfillSO/',
+    className: 'unfillSalesOrder',
+    headerText: 'Unfill an SO',
+    group: 'Escalate'
+
+};
+allPages.push(unfillSalesOrderPage);
 
 
 //-------------------------------------Keep new pages above this line---------------------------------------------------
