@@ -226,11 +226,24 @@ allPages.push(createIstPage);
 let addonPolicyPage = 
 {
 
-    descriptions: ['This page is a placeholder, and not yet finished.'],
+    descriptions:
+    [
+        `Addon policy: If a piece is two-to-a-box, and both labels go to separate locations, the location that is picked first gets both of the labels. If you have to remove a SKU from a truck, remember to email the store that the reason was due to our addon policy.
 
-    imagesPath: './resources/null/',
+ 
+
+        To create an addon, log into LOFT and go to your Shipments tab. Click on new Transfer.`,
+        `Change the Site and To Site locations to the correct location and destination. Change the delivery date to the correct date. Add the SKUs of the items you wish to add-on to the truck file. Make sure Shipping is blank and click Save.`,
+        `If a line doesn't fill (marked yellow), click on fill eligibility and change the fill date to 6 months ago. Enter your username and password again and save the transfer again. If it still doesn’t fill, you will have to unfill an SO that is reserving that SKU before saving the transfer.`,
+        `Once the transfer is filled and saved, copy your transfer ID and click on truck routes.`,
+        `Type in 'w20' for the truck field, and the delivery date. Click search to see the truck routes of that date.`,
+        `Click on the truck route you're going to add a SKU to. Click on the TRANSFERS tab and the Transfer ID field will pop up. Paste your transfer ID in that field and click search. Click and drag the transfer on the left to the truck route on the right. Click on Save truck route at the top right.`,
+        `Once you've added that transfer to the truck route & saved the route, you will be able to allocate that piece in BXK.`,
+    ],
+
+    imagesPath: './resources/addon/',
     className: 'addonPolicyContent',
-    headerText: 'Addons / Addon Policy *',
+    headerText: 'Addons / Addon Policy',
     group: 'LOFT'
 };
 allPages.push(addonPolicyPage);
