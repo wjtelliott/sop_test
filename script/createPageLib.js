@@ -49,6 +49,7 @@ let createPage = function(className, headerText, imagePaths, descriptions)
         newDiv.append(document.createElement('br'));
         let newImage = document.createElement('img');
         newImage.setAttribute('src', `${imagePaths}step${i}.JPG`);
+        newImage.setAttribute('onerror', `errorImage(this);`);
         if (!(newImage == null))
             newDiv.append(newImage);    
 
@@ -62,6 +63,31 @@ let createPage = function(className, headerText, imagePaths, descriptions)
     return newDiv;
 
 };
+
+
+// This will let us support PNG and JPG files. Sometimes the filesystem is case-sensitive.
+let errorImage = function(e)
+{
+    let ext = e.src.substr(e.src.length - 3);
+    switch (ext)
+    {
+        case 'JPG':
+            ext = 'jpg';
+            break;
+        case 'jpg':
+            ext = 'PNG';
+            break;
+        case 'PNG':
+            ext = 'png';
+            break;
+        case 'png':
+        default:
+            e.style.display = 'none';
+            return;
+    }
+    e.src = e.src.slice(0, -3) + ext;
+}
+
 
 // example of the list link we wish to replicate
 // <li style="font-size: 24px;"><a href='#deleteItemContent' onclick="return changePage('.deleteItemContent')">Delete Item</a></li>
