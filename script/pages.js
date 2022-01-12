@@ -223,6 +223,24 @@ let createIstPage =
 };
 allPages.push(createIstPage);
 
+let reopenBXKPO = 
+{
+
+    descriptions: [
+        'Open BXK and go to Maintenance -> PO Maintenance -> PO Maintenance',
+        'Goto Filters and type in your PO as an option',
+        'After you\'ve clicked submit, click on the underlined 1 to the left of the PO',
+        'Click on the PO # at the top left',
+        'In this example, this PO is still open. When the PO is set to closed status, a button will appear next to the others highlighted below that is named Activate. Click on the Activate button and then confirm reopen the PO.'
+    ],
+
+    imagesPath: './resources/reopen/',
+    className: 'reopenPOBXK',
+    headerText: 'Reopen a closed PO',
+    group: 'BXK'
+};
+allPages.push(createIstPage);
+
 let addonPolicyPage = 
 {
 
