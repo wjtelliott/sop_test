@@ -160,6 +160,26 @@ let finalizeAnISTPage =
 
     descriptions: [
         
+        `To finalize an IST in loft, go to Shipments - Transfers - Tranfers`,
+
+        `Type in your ist # into the transfer ID field, or fill out Site / To Site. Check Open transfers, and change the delivery date if needed. Click on the IST# to open it after you've searched.`,
+
+        `Click on the status field and change it to Closed. Save the transfer.`
+    
+    ],
+
+    imagesPath: './resources/finalizeLoft/',
+    className: 'finalizeISTContentLoft',
+    headerText: 'Finalize an IST',
+    group: 'LOFT'
+};
+allPages.push(finalizeAnISTPage);
+
+let finalizeAnISTPage = 
+{
+
+    descriptions: [
+        
         `To finalize an IST, open ERS and open ISTM.`,
 
         `Fill out the top of ISTM as shown, change the date to your finalizing date, and change the store / location to the store and location that you are finalizing the IST TO. This example finalizing an IST TO W2.`,
