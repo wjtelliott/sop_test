@@ -155,7 +155,7 @@ let shortItemPage =
 };
 allPages.push(shortItemPage);
 
-let finalizeAnISTPage = 
+let finalizeAnISTPageLoft = 
 {
 
     descriptions: [
@@ -173,7 +173,7 @@ let finalizeAnISTPage =
     headerText: 'Finalize an IST',
     group: 'LOFT'
 };
-allPages.push(finalizeAnISTPage);
+allPages.push(finalizeAnISTPageLoft);
 
 let finalizeAnISTPage = 
 {
@@ -210,11 +210,16 @@ allPages.push(bolGenerationPage);
 let assignWorkPage = 
 {
 
-    descriptions: ['This page is a placeholder, and not yet finished.'],
+    descriptions: [
+        'On BXK, goto to Work Management -> Assign work roles to a user',
+        'In the drop-down box: Choose W2-Baraboo department',
+        'Click on the NAME of the user.',
+        'At the bottom, use the left and right arrow keys to assign and de-assign roles to that user you clicked on from the available roles box. Rows 1/3/4 will be Zone B, list, and D. Rows 1/4 will skip list. Rows 1/4 DESC will start at Row 67 and skip list. The letter after the row numbers will be the group for that user.'
+    ],
 
-    imagesPath: './resources/null/',
+    imagesPath: './resources/assignRoles/',
     className: 'assignWorkToUserContent',
-    headerText: 'Assign Work to a User *',
+    headerText: 'Assign Work to a User',
     group: 'BXK'
 };
 allPages.push(assignWorkPage);
@@ -289,11 +294,21 @@ allPages.push(addonPolicyPage);
 let tdmBasicsPage = 
 {
 
-    descriptions: ['This page is a placeholder, and not yet finished.'],
+    descriptions: [
+        'First open and log into escalate. Open TDM function',
+        'Press Shift+F2 to highlight the row. In Truck Number field type the manifest number, and in the delivery date field type the manifest date. In this example, we use manifest W20T6-121421',
+        'Press F2 and you will see all of the ISTs for that manifest. Press ENTER until it highlights the IST number in the Document # column',
+        'Press F10 and you will open ISTM with that IST# already filled in',
+        'Press Control + C to copy the IST that is highlighted in ISTM. Press F7 to go up a block. Type in F for finalize, as well as the date / location  to finalize that IST to. In this example we finalize to T6-T6TRK',
+        'Press F8 to go down a block. Press Control + V to paste your copied IST# back into the IST number field.',
+        'Press F2 to reopen the IST with the finalizing info above. Press F9 to commit, and F12 to go back. The IST in the picuted example is already finalized, so the picture below will be the same as above.',
+        'After youve pressed F12, you will see this screen below again. Press the down arrow, and then ENTER until you are on the next Document# that you need to finalize, if any.',
+        'If an IST is already finalized, it will have an "IST is no longer open -- Please try again" test at the bottom left of the screen, pictured below.',
+    ],
 
-    imagesPath: './resources/null/',
+    imagesPath: './resources/tdmFinalize/',
     className: 'tdmBasicContent',
-    headerText: 'Using TDM to finalize trucks *',
+    headerText: 'Using TDM to finalize trucks',
     group: 'Escalate'
 };
 allPages.push(tdmBasicsPage);
