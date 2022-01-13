@@ -239,7 +239,7 @@ let reopenBXKPO =
     headerText: 'Reopen a closed PO',
     group: 'BXK'
 };
-allPages.push(createIstPage);
+allPages.push(reopenBXKPO);
 
 let addonPolicyPage = 
 {
